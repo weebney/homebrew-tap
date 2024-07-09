@@ -10,6 +10,7 @@ class Inblog < Formula
   depends_on "make" => :build
 
   def install
+    system "go mod tidy"
     system "make"
     bin.install "bin/inblog"
   end
